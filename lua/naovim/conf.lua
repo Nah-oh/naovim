@@ -16,3 +16,12 @@ vim.keymap.set("n", "<leader>m", function() harpoon.ui:toggle_quick_menu(harpoon
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<C-j>", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<C-k>", function() harpoon:list():next() end)
+
+-- LSP
+vim.lsp.config('luals', {
+  cmd = {'lua-language-server'},
+  filetypes = {'lua'},
+  root_markers = {'.luarc.json', '.luarc.jsonc'},
+})
+
+vim.lsp.enable('luals')
