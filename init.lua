@@ -14,3 +14,4 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 vim.lsp.enable({'rust_analyzer'})
+vim.lsp.enable('svelte-language-server')
