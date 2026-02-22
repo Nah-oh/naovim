@@ -23,11 +23,13 @@ vim.lsp.config('luals', {
 -- LSP configuration
 vim.lsp.enable('luals')
 vim.lsp.enable('pyright')
+vim.lsp.enable('nil')
 
 -- Formatters setup on save
 require("conform").setup({
   formatters_by_ft = {
     python = { "black" },
+    nix = { " nixfmt "},
   },
 })
 
