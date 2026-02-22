@@ -5,6 +5,7 @@ require('mason-tool-installer').setup({
     ensure_installed = {
         -- LSPs
         'pyright',
+        'nil',
 
         -- Formatters
         'black',
@@ -29,8 +30,12 @@ vim.lsp.enable('nil')
 require("conform").setup({
   formatters_by_ft = {
     python = { "black" },
-    nix = { " nixfmt "},
+    nix = { "nixfmt" },
   },
+    format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+    },
 })
 
 -- require("conform").setup({
